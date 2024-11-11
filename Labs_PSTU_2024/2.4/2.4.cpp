@@ -3,7 +3,7 @@ int main()
 {
 	int N;
 	std::cin >> N;
-	if (N % 2 == 0 or N < 3)
+	if (N % 2 == 0 or N <= 3)
 	{
 		std::cout << "error";
 		return 0;
