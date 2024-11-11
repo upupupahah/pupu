@@ -8,17 +8,20 @@ int main()
 		std::cout << "error";
 		return 0;
 	}
-	for (int i = 0; i <= N; i++)
+	else
 	{
-		if (i % 2 != 0)
+		for (int i = 0; i <= N; i++)
 		{
-			for (int q = 0; q <= (N - i) / 2; q++)
+			if (i % 2 != 0)
 			{
-				std::cout << " ";
+				for (int q = 1; q <= (N - i) / 2; q++)
+				{
+					std::cout << " ";
+				}
+				for (int j = 0; j < i; j++)
+					std::cout << "*";
+				std::cout << std::endl;
 			}
-			for (int j = 0; j < i; j++)
-				std::cout << "*";
-			std::cout << std::endl;
 		}
 	}
 	return 0;
