@@ -1,17 +1,19 @@
 #include <iostream>
+
 int main()
 {
-	int S = 0, N, x;
+	int N;
 	std::cin >> N;
+	int sum = 0;
 	for (int i = 1; i <= N; i++)
 	{
-		x = 1;
-		for (int ii = i; ii <= 2*i; ii++)
+		int k = i;
+		for (int j = i+1; j <= i * 2; j++)
 		{
-			x *= ii;
+			k *= j;
 		}
-		S = S + x;
+		sum += k;
 	}
-	std::cout << S;
+	std::cout << sum;
 	return 0;
 }
