@@ -2,7 +2,8 @@
 #include <cmath>
 int main()
 {
-	int a, b, c, D, x1, x2;
+	int a, b, c; 
+	float D, x1, x2;
 	std::cout << "enter coefficient a: ";
 	std::cin >> a;
 	std::cout << "enter coefficient b: ";

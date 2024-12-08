@@ -9,7 +9,6 @@ int main()
 		N /= 10;
 	}
 	sum += N;
-
-	std::cout << "summa = " << sum;
+	std::cout << "sum = " << sum;
 	return 0;
 }

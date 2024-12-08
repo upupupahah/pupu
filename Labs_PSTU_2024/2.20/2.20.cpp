@@ -11,8 +11,7 @@ int main()
 	std::cin >> S;
 	for (int i = 1; i <= N; i++)
 	{
-		float a;
-		a = sin(i + i / N);
+		float a = sin(i + i / N);
 		if (a == S)
 		{
 			t = 1;

@@ -11,14 +11,12 @@ int main()
 	for (int i = 1; i < 100; i++)
 	{
 		int f = pow(10, i);
-		// std::cout << f << std::endl;
-		int x = (N % f) - N%(f/10);
-		x = x / (f / 10);
+		int x = (N % f) - N % (f / 10);
+		x /= f / 10;
 		if (x == 0)
 		{
 			break;
 		}
-		// std::cout << "its x: " << x << std::endl;
 		if (x == S)
 		{
 			t = 1;
