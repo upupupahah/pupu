@@ -35,7 +35,7 @@
 | `pointer_3` | ✓  | ✓ |
 | `pointer_4` | ✓  | ✓ |
 | `pointer_5` | ✓  | ✓ |
-| `ЧТЛ` | -  | - |
-| `ЧТЛ` | -  | - |
-| `ЧТЛ` | -  | - |
-| `recursion` | ✓  | - |
+| `eq_half` | -  | - |
+| `eq_Newton` | -  | - |
+| `eq_Literation` | -  | - |
+| `recursion` | ✓  | ✓ |
