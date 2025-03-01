@@ -14,19 +14,19 @@ void prost(int k, ...) {
 	for (int i = 1; i < k; i++) {
 		int sec_arg = va_arg(a, int);
 		std::cout << "interval: (" << first_arg << "; " << sec_arg << "): ";
-		
-		for (int i = ++first_arg; i < sec_arg; i++) {
-			bool s = 1;
-			if (i < 2) {
-				s = 0;
+
+		for (int num = ++first_arg; num < sec_arg; num++) {
+			bool is_prost = 1;
+			if (num < 2) {
+				is_prost = 0;
 			}
-			for (int j = 2; j < i; j++) {
-				if (i % j == 0) {
-					s = 0;
-				}	
+			for (int j = 2; j < num; j++) {
+				if (num % j == 0) {
+					is_prost = 0;
+				}
 			}
-			if (s) {
-				std::cout << i << " ";
+			if (is_prost) {
+				std::cout << num << " ";
 			}
 		}
 		std::cout << std::endl;
