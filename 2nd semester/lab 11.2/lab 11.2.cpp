@@ -1,41 +1,32 @@
 /*
-Односвязный список
+Двусвязный список
 
-Записи в линейном списке содержат ключевое поле типа *char(строка символов).
-Сформировать структуру.
-Удалить элемент с заданным номером.
+Записи в линейном списке содержат ключевое поле типа *char(строка символов). 
+Сформировать структуру. +
+Удалить элемент с заданным номером. +
 Добавить К элементов в начало списка.
 */
+
 
 #include <iostream>
 
 //структура узла
 struct Node {
 	char data;
-	Node* next;
+	Node* prev = nullptr;
+	Node* next = nullptr;
 
 	void add(char Data) {
 		data = Data;
-		next = nullptr;
 	}
 };
 
 //структура списка
-struct singleList {
+struct doubleList {
 	Node* head = nullptr;
 	Node* tail = nullptr;
 
 	void pushFront(char data) {
-		Node* node = new Node; //создание нового узла для элемента
-		node->add(data);
-		node->next = head;
-		head = node;
-		if (tail == nullptr) {
-			tail = node;
-		}
-	}
-
-	void pushBack(char data) {
 		Node* node = new Node;
 		node->add(data);
 		if (head == nullptr) {
@@ -43,56 +34,76 @@ struct singleList {
 			tail = node;
 		}
 		else {
-			tail->next = node;
-			tail = node;
+			node->next = head;
+			head->prev = node;
+			head = node;
 		}
 	}
 
+	void pushBack(char data) {
+		Node* node = new Node;
+		node->add(data);
+		node->prev = tail;
+		if (tail != nullptr) {
+			tail->next = node;
+		}
+		if (head == nullptr) {
+			head = node;
+		}
+		tail = node;
+	}
+
 	void Delete(int k) {
-		if (k == 0) {
-			Node* temp = head;
-			head = head->next;
-			delete temp;
-			return;
-		}
-
 		Node* current = head;
-		for (int i = 0; current != nullptr && i < k - 1; i++) {
+		int count = 0;
+		
+		while (current != nullptr && count < k) {
 			current = current->next;
-		}
-		Node* tmp = current->next;
-		current->next = tmp->next;
-
-		if (tmp == tail) {
-			tail = current;
+			count++;
 		}
 
-		delete tmp;
+		if (current->prev != nullptr) {
+			current->prev->next = current->next;
+		}
+		else {
+			head = current->next;
+		}
+		if (current->next != nullptr) {
+			current->next->prev = current->prev;
+		}
+		else {
+			tail = current->prev;
+		}
+
+		delete current;
 	}
 };
 
 int main() {
-	singleList list;
+	doubleList list;
+
 	int l;
 	std::cout << "enter length of list: ";
 	std::cin >> l;
+
 	for (int i = 0; i < l; i++) {
 		char tmp;
 		std::cout << "enter " << i + 1 << " element of list: ";
 		std::cin >> tmp;
 		list.pushBack(tmp);
 	}
+	std::cout << std::endl;
 
-	std::cout << "\nyour list is: ";
+	std::cout << "your list is: ";
 	Node* node = list.head;
 	while (node != nullptr) {
 		std::cout << node->data << ' ';
 		node = node->next;
 	}
-	std::cout << std::endl;
+	std::cout << std::endl << std::endl;
 
 	int k;
-	std::cout << "\nenter index of element to delete: ";
+	std::cout << "enter index of element to delete: ";
 	std::cin >> k;
 	list.Delete(k);
 	std::cout << std::endl;
@@ -107,8 +118,6 @@ int main() {
 
 	std::cout << std::endl << "now add some elements to front. enter number of elements: ";
 	std::cin >> k;
-
-	node = list.head;
 	for (int i = 0; i < k; i++) {
 		char tmp;
 		std::cout << "enter " << i + 1 << " new element: ";
@@ -117,8 +126,8 @@ int main() {
 	}
 	std::cout << std::endl;
 
-	node = list.head;
 	std::cout << "new list with your added elements: ";
+	node = list.head;
 	while (node != nullptr) {
 		std::cout << node->data << ' ';
 		node = node->next;
