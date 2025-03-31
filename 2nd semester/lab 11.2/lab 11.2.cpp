@@ -116,7 +116,7 @@ int main() {
 	}
 	std::cout << std::endl;
 
-	std::cout << std::endl << "now add some elements to front. enter number of elements: ";
+	std::cout << std::endl << "now add some elements to front. enter count of elements: ";
 	std::cin >> k;
 	for (int i = 0; i < k; i++) {
 		char tmp;
