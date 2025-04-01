@@ -40,12 +40,11 @@ struct singleList {
 		node->add(data);
 		if (head == nullptr) {
 			head = node;
-			tail = node;
 		}
 		else {
 			tail->next = node;
-			tail = node;
 		}
+		tail = node;
 	}
 
 	void Delete(int k) {
