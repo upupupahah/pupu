@@ -19,8 +19,8 @@ help.me
 | `hoare sort` | ✓  | - |
 | `shell sort` | ✓  | - |
 | `lomuto sort` | ✓  | - |
-| `bucket sort` | ✓  | - |
-| `counting sort` | ✓  | - |
+| `bucket sort` | ✓  | ✓ |
+| `counting sort` | ✓  | ✓ |
 | `merge sort` | ✓  | - |
 
 
