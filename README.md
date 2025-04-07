@@ -17,11 +17,11 @@ help.me
 | `8 queens` | ✓  | ✓ |
 | `IDEF0` | ✓  | ✓ |
 | `hoare sort` | ✓  | - |
+| `shell sort` | ✓  | - |
 | `lomuto sort` | ✓  | - |
 | `bucket sort` | ✓  | - |
 | `counting sort` | ✓  | - |
 | `merge sort` | ✓  | - |
-| `shell sort` | ✓  | - |
 
 
 
