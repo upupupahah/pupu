@@ -5,7 +5,7 @@ const int BUCKET_NUM = 10, BUCKET_SIZE = 10;
 int* bucketSort(int arr[], int n)
 {
 	int buckets[BUCKET_NUM][BUCKET_SIZE];
-		int bucketSizes[BUCKET_NUM] = { 0 };
+	int bucketSizes[BUCKET_NUM] = { 0 };
 
 	for (int i = 0; i < n; i++)
 	{
