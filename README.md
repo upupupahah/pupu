@@ -27,6 +27,12 @@
 | `interpolation search` | ✔️  | ✔️ |
 | `Boyer-Moore search` | ✔️  | ❌ |
 | `Knuth-Morris-Pratt search` | ✔️  | ❌ |
+| `Hash-tables` | ✔️  | ❌ |
+| `Knuth-Morris-Pratt search` | ✔️  | ❌ |
+| `Hash tables` | ❌  | ❌ |
+| `Деревья` | ❌  | ❌ |
+| `Графы` | ❌  | ❌ |
+
 
 
 
@@ -65,4 +71,7 @@
 | `lab class 11` | ❌  | ❌ |
 | `lab class 12` | ❌  | ❌ |
 | `lab class 13` | ❌  | ❌ |
-| ----------------- | --  | -- |
+
+
+
+
