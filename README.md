@@ -65,7 +65,7 @@
 | `lab class 5` | ✔️  | ✔️ |
 | `lab class 6` | ✔️  | ✔️ |
 | `lab class 7` | ✔️  | ❌ |
-| `lab class 8` | ❌  | ❌ |
+| `lab class 8` | ✔️  | ✔️ |
 | `lab class 9` | ❌  | ❌ |
 | `lab class 10` | ❌  | ❌ |
 | `lab class 11` | ❌  | ❌ |
