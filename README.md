@@ -16,7 +16,7 @@
 | `hanoy` | ✔️  | ✔️ |
 | `8 queens` | ✔️  | ✔️ |
 | `IDEF0` | ✔️  | ✔️ |
-| `hoare sort` | ✔️  | ❌ |
+| `hoare sort` | ✔️  | ✔️ |
 | `shell sort` | ✔️  | ❌ |
 | `lomuto sort` | ✔️  | ❌ |
 | `bucket sort` | ✔️  | ✔️ |
